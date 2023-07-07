@@ -41,7 +41,7 @@ services:
     volumes:
       # - static_production:/staticfiles/
       - static:/static
-      - production:/app/media/
+      - media:/app/media/
     ports:
       - 9000:80
     # depends_on:
