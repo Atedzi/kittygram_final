@@ -12,22 +12,22 @@ services:
     volumes:
       - pg_data_production:/var/lib/postgresql/data
   backend:
-    build: ./backend/
+    image: atedzi/kittygram_backend
     env_file: .env
     volumes:
-      - static_production:/backend_static
-      - media_production:/media/
+      - static_production:/backend_static/
+      - media_production:/app/media/
     depends_on:
       - db
   frontend:
+    image: atedzi/kittygram_frontend
     env_file: .env
-    build: ./frontend/
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_production:/frontend_static
   gateway:
-    build: ./nginx/
-    env_file: .env    
+    image: atedzi/kittygram_gateway
+    env_file: .env
     volumes:
       - static_production:/staticfiles/
       - media_production:/media/
