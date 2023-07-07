@@ -42,6 +42,7 @@ services:
       # - static_production:/staticfiles/
       - static:/static
       - media:/app/media/
+      # - media_production:/app/media
     ports:
       - 9000:80
     # depends_on:
