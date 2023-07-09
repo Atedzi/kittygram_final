@@ -16,21 +16,26 @@ services:
     image: atedzi/kittygram_backend
     env_file: .env
     volumes:
-      - static:/static/
-      - media:/app/media/
+      # - static:/static/
+      - static_volume:/backend_static
+      # - media:/app/media/
+      - media:/media/
 
   frontend:
     image: atedzi/kittygram_frontend
     env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
-      - static:/static/
+      # - static:/static/
+      - static_volume:/frontend_static
 
   gateway:
     image: atedzi/kittygram_gateway
     env_file: .env
     volumes:
-      - static:/static/
-      - media:/app/media/
+      # - static:/static/
+      - static_volume:/staticfiles/
+      # - media:/app/media/
+      - media:/media/
     ports:
       - 9000:80
