@@ -8,15 +8,15 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
-# SECRET_KEY = os.getenv('SK', default='True')
+#SECRET_KEY = 'django-insecure-cg6*%6d51ef8f#4!r3*$vmxm4)abgjw8mo!4y-q*uq1!4$-89$'
+SECRET_KEY = os.getenv('SK', default='True')
 
 DEBUG = True
 #DEBUG = bool(strtobool(os.getenv('Debug', default='False')))
 
 # ALLOWED_HOSTS = ['84.201.177.236', '127.0.0.1', 'lokalhost']
 #ALLOWED_HOSTS = os.getenv('Hosts', '').split(' ')
-ALLOWED_HOSTS = ['kittyks.hopto.org', '127.0.0.1', 'lokalhost']
+ALLOWED_HOSTS = ['kittyks.hopto.org', 'lokalhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -89,18 +89,6 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', 5432)
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.getenv('POSTGRES_DB', 'django'),
-#         'USER': os.getenv('POSTGRES_USER', 'django'),
-#         'PASSWORD': os.getenv('POSTGRES_PASSWORD', ''),
-#         'HOST': os.getenv('DB_HOST', ''),
-#         'PORT': os.getenv('DB_PORT', 5432)
-#     }
-# }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
