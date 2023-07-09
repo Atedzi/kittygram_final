@@ -16,7 +16,8 @@ DEBUG = True
 
 # ALLOWED_HOSTS = ['84.201.177.236', '127.0.0.1', 'lokalhost']
 #ALLOWED_HOSTS = os.getenv('Hosts', '').split(' ')
-ALLOWED_HOSTS = ['kittyks.hopto.org', 'lokalhost', '127.0.0.1']
+# ALLOWED_HOSTS = ['kittyks.hopto.org', 'lokalhost', '127.0.0.1']
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "db", "gateway"]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
