@@ -10,15 +10,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SK', default='True')
 
-DEBUG = True
-#DEBUG = bool(strtobool(os.getenv('Debug', default='True')))
+DEBUG = bool(strtobool(os.getenv('Debug', default='True')))
 
-#ALLOWED_HOSTS = os.getenv('Hosts', '').split(' ')
-#ALLOWED_HOSTS = ['84.201.177.236', '127.0.0.1', 'lokalhost']
-#ALLOWED_HOSTS = ["127.0.0.1", "localhost", "db", "gateway"]
-#ALLOWED_HOSTS=['84.201.177.236:9000', '127.0.0.1:9000', 'localhost:9000', 'kittyks.hopto.org']
-#ALLOWED_HOSTS = ['kittyks.hopto.org', 'lokalhost', '127.0.0.1']
-ALLOWED_HOSTS = ['84.201.177.236', 'lokalhost', '127.0.0.1', 'kittyks.hopto.org']
+ALLOWED_HOSTS = os.getenv('Hosts', '').split(' ')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -107,7 +101,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'collected_static'
 
 MEDIA_URL = '/media/'
-# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_ROOT = '/media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
