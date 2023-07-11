@@ -18,7 +18,7 @@ DEBUG = True
 #ALLOWED_HOSTS = ["127.0.0.1", "localhost", "db", "gateway"]
 #ALLOWED_HOSTS=['84.201.177.236:9000', '127.0.0.1:9000', 'localhost:9000', 'kittyks.hopto.org']
 ALLOWED_HOSTS = ['kittyks.hopto.org', 'lokalhost', '127.0.0.1']
-# ALLOWED_HOSTS = ['kittyks.hopto.org', '84.201.177.236', 'lokalhost', '127.0.0.1']
+#ALLOWED_HOSTS = ['kittyks.hopto.org', '84.201.177.236', 'lokalhost', '127.0.0.1']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
