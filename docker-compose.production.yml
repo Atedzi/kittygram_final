@@ -19,7 +19,7 @@ services:
     volumes:
       # - static:/static/
       - static_volume:/backend_static
-      # - media:/app/media/
+      #- media:/app/media/
       - media:/media/
 
   frontend:
