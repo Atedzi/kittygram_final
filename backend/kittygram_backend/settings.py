@@ -10,8 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SK', default='True')
 
-# DEBUG = True
-DEBUG = bool(strtobool(os.getenv('Debug', default='True')))
+DEBUG = True
+#DEBUG = bool(strtobool(os.getenv('Debug', default='True')))
 
 #ALLOWED_HOSTS = os.getenv('Hosts', '').split(' ')
 #ALLOWED_HOSTS = ['84.201.177.236', '127.0.0.1', 'lokalhost']
