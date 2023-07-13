@@ -1,7 +1,8 @@
 import os
-from pathlib import Path
-from dotenv import load_dotenv
 from distutils.util import strtobool
+from pathlib import Path
+
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -106,7 +107,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.IsAuthenticated', 
+        'rest_framework.permissions.IsAuthenticated',
     ],
 
     'DEFAULT_AUTHENTICATION_CLASSES': [
